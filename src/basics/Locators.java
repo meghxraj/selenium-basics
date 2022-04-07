@@ -1,5 +1,7 @@
 package basics;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,21 +13,50 @@ public class Locators {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		
+		//adding implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));	
+		
 		driver.get("https://rahulshettyacademy.com/locatorspractice");
 		driver.findElement(By.id("inputUsername")).sendKeys("test");
 		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademytest");
 		//driver.findElement(By.id("chkboxOne")).click();
 		//driver.findElement(By.name("chkboxOne")).click();
 		driver.findElement(By.className("signInBtn")).click();
+	
 		String errorMsg =driver.findElement(By.cssSelector("p.error")).getText();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		/*
+		 * syntax for using cssSelectors -> classname -> tagname.classname id ->
+		 * tagname#id generic -> tagname[attribute='value']
+		 * using with index -> tagname[attribute='value']:nth-child(index)
+		 * traversing from parent to child -> parentTagName childTagname
+		 */
 		System.out.println(errorMsg);
-		driver.quit();
+		
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		
+		/*
+		 * syntax for using xpath -> //tagname[@attribute='value']
+		 * using with index //tagname[@attribute='value'][index]
+		 * traversing in the parent to child attributes -> //parentTagName/childtagName[index]
+		 */
+		
+		//selecting locator using index
+		
+		
+		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("megharaj");
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("maggie.test@gmail.com");
+		//indexing with xpath
+		driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
+		
+		//indexing with cssSelector
+		driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("test@email.com");
+		
+		//travesing from parent to child node
+		driver.findElement(By.xpath("//form/input[3]")).sendKeys("9876543210");
+		driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
+	//	driver.quit();
 		
 	}
 
