@@ -5,11 +5,12 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Locators {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -31,6 +32,7 @@ public class Locators {
 		 * tagname#id generic -> tagname[attribute='value']
 		 * using with index -> tagname[attribute='value']:nth-child(index)
 		 * traversing from parent to child -> parentTagName childTagname
+		 * regex -> tagname[attribute*='value']
 		 */
 		System.out.println(errorMsg);
 		
@@ -40,6 +42,10 @@ public class Locators {
 		 * syntax for using xpath -> //tagname[@attribute='value']
 		 * using with index //tagname[@attribute='value'][index]
 		 * traversing in the parent to child attributes -> //parentTagName/childtagName[index]
+		 * regex -> //tagname[contains(@attribute,'value')]
+		 * using text-> //tagname[text()='value']
+		 * 
+		 * Note: in xpath //tagname can also be written as //*
 		 */
 		
 		//selecting locator using index
@@ -56,7 +62,28 @@ public class Locators {
 		//travesing from parent to child node
 		driver.findElement(By.xpath("//form/input[3]")).sendKeys("9876543210");
 		driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
-	//	driver.quit();
+		String tempPassword =driver.findElement(By.cssSelector("p.infoMsg")).getText();
+		tempPassword = tempPassword.split("'")[1];
+		tempPassword = tempPassword.split("'")[0];
+		
+		System.out.println(tempPassword);
+		String testname = "testing";
+		driver.findElement(By.xpath("//button[@class='go-to-login-btn']")).click();
+		driver.findElement(By.id("inputUsername")).sendKeys(testname);
+		driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys(tempPassword);
+		driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
+		Thread.sleep(2000);
+		String loggedIn =driver.findElement(By.tagName("p")).getText();
+		Assert.assertEquals(loggedIn, "You are successfully logged in.");
+		String usernameLogin =driver.findElement(By.xpath("//div[@class='login-container']/h2")).getText();
+		Assert.assertEquals(usernameLogin, "Hello "+testname+",");
+		
+		driver.findElement(By.className("logout-btn")).click();
+		driver.quit();
+		
+		
+		
+		
 		
 	}
 
