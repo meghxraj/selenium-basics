@@ -10,7 +10,7 @@ public class InvokeDriver {
 
 	public static void main(String[] args) {
 
-		// traditional way of initilizing chrome driver
+		// traditional way of initializing chrome driver
 		/*
 		 * String path = "D:\\Leanings\\Selenium\\Drivers\\chromedriver_win32\\chromedriver.exe";
 		 * System.setProperty("webdriver.chrome.driver", path);
