@@ -34,7 +34,7 @@ public class AlertBox {
 		System.out.println(driver.switchTo().alert().getText());
 		driver.switchTo().alert().dismiss();
 
-		driver.quit();
+		//driver.quit();
 
 	}
 
