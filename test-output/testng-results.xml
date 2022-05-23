@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="7" total="15" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-23T11:29:53 IST" name="Suite" finished-at="2022-05-23T11:29:53 IST" duration-ms="347">
+    <groups>
+      <group name="test">
+        <method signature="Annotations.abctest()[pri:0, instance:testNGDemo.Annotations@7b9a4292]" name="abctest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.zTest()[pri:0, instance:testNGDemo.Annotations@7b9a4292]" name="zTest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.abctest()[pri:0, instance:testNGDemo.Annotations@351d00c0]" name="abctest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.zTest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" name="zTest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.abctest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" name="abctest" class="testNGDemo.Annotations"/>
+      </group> <!-- test -->
+      <group name="smoke">
+        <method signature="Annotations.abctest()[pri:0, instance:testNGDemo.Annotations@7b9a4292]" name="abctest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.abctest()[pri:0, instance:testNGDemo.Annotations@351d00c0]" name="abctest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.test()[pri:0, instance:testNGDemo.Annotations@351d00c0]" name="test" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.abctest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" name="abctest" class="testNGDemo.Annotations"/>
+        <method signature="Annotations.test()[pri:0, instance:testNGDemo.Annotations@47eaca72]" name="test" class="testNGDemo.Annotations"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2022-05-23T11:29:53 IST" name="Test" finished-at="2022-05-23T11:29:53 IST" duration-ms="132">
+      <class name="testNGDemo.Annotations">
+        <test-method signature="abctest()[pri:0, instance:testNGDemo.Annotations@7b9a4292]" started-at="2022-05-23T11:29:53 IST" name="abctest" finished-at="2022-05-23T11:29:53 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abctest -->
+        <test-method signature="zTest()[pri:0, instance:testNGDemo.Annotations@7b9a4292]" started-at="2022-05-23T11:29:53 IST" name="zTest" finished-at="2022-05-23T11:29:53 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zTest -->
+      </class> <!-- testNGDemo.Annotations -->
+    </test> <!-- Test -->
+    <test started-at="2022-05-23T11:29:53 IST" name="Smoke" finished-at="2022-05-23T11:29:53 IST" duration-ms="16">
+      <class name="testNGDemo.Annotations">
+        <test-method signature="abctest()[pri:0, instance:testNGDemo.Annotations@351d00c0]" started-at="2022-05-23T11:29:53 IST" name="abctest" finished-at="2022-05-23T11:29:53 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abctest -->
+        <test-method signature="test()[pri:0, instance:testNGDemo.Annotations@351d00c0]" started-at="2022-05-23T11:29:53 IST" name="test" finished-at="2022-05-23T11:29:53 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- testNGDemo.Annotations -->
+    </test> <!-- Smoke -->
+    <test started-at="2022-05-23T11:29:53 IST" name="All" finished-at="2022-05-23T11:29:53 IST" duration-ms="49">
+      <class name="testNGDemo.Annotations">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeSuite" finished-at="2022-05-23T11:29:53 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeTest" finished-at="2022-05-23T11:29:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeClass" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="zTest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="zTest" finished-at="2022-05-23T11:29:53 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="abctest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="abctest" finished-at="2022-05-23T11:29:53 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abctest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="test" finished-at="2022-05-23T11:29:53 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="dependsMethods()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="dependsMethods" finished-at="2022-05-23T11:29:53 IST" depends-on-methods="testNGDemo.Annotations.zTest" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dependsMethods -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="beforeMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterMethod" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterClass" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterTest" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testNGDemo.Annotations@47eaca72]" started-at="2022-05-23T11:29:53 IST" name="afterSuite" finished-at="2022-05-23T11:29:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testNGDemo.Annotations -->
+    </test> <!-- All -->
+  </suite> <!-- Suite -->
+</testng-results>
