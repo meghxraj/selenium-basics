@@ -3,7 +3,6 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 
@@ -15,8 +14,8 @@ public class AlertBox {
 		capability.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(capability);
+		WebDriver driver =WebDriverManager.chromedriver().capabilities(capability).create();
+		//WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

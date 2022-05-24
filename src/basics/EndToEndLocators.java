@@ -6,7 +6,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.ui.Select;
@@ -21,9 +20,10 @@ public class EndToEndLocators {
 		ChromeOptions capability = new ChromeOptions();
 		capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		capability.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(capability);
 
+		WebDriver driver =WebDriverManager.chromedriver().capabilities(capability).create();
+		//WebDriver driver = new ChromeDriver();
+		
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

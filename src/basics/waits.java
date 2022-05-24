@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
@@ -55,8 +54,8 @@ public class waits {
 	
 	public static void main(String[] args) {
 		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver =WebDriverManager.chromedriver().create();
+		//WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 		

@@ -8,7 +8,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
@@ -41,8 +40,8 @@ public class ChromeOptionsDemo {
 		
 		
 	
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver =WebDriverManager.chromedriver().capabilities(options).create();
+		//WebDriver driver = new ChromeDriver();
 		driver.get("https://expired.badssl.com/");
 		System.out.println(driver.getTitle());
 		

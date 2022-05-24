@@ -1,9 +1,6 @@
 package basics;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class InvokeDriver {
@@ -21,9 +18,8 @@ public class InvokeDriver {
 
 		// alternatively we can use WebDriverManager libraries to initiate chrome driver
 		// which does not need to be downloaded manually
-		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver =WebDriverManager.chromedriver().create();
+		//WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com");
 		driver.manage().window().maximize();
 		//driver.quit();
