@@ -31,7 +31,7 @@ public class NetworkDemo {
 		// handelling the request
 		tools.addListener(Network.requestWillBeSent(), request -> {
 			System.out.println("Request getMethod --"+request.getRequest().getMethod());
-			request.getRequestId().
+			
 			System.out.println("Request getURL--"+request.getRequest().getUrl());
 			System.out.println(request.getRequest().getHeaders());
 		});
